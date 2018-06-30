@@ -25,7 +25,7 @@
         .dropbtn {
     color: white;
     padding: 0;
-    font-size: 15px;
+    font-size: 12px;
     border: none;
 }
 
@@ -60,10 +60,17 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 @media only screen and (max-width: 600px) {
-    .bodtimeline__descy {
-        background-color: lightblue;
+    #bigscreen {
+        display: none;
     }
 }
+
+@media only screen and (min-width: 601px) {
+    #smallscreen {
+        display: none;
+    }
+}
+
 
     </style>
     <script>
@@ -96,19 +103,19 @@
         <nav class="header-nav-wrap">
             <ul class="header-nav">
                  <div class="dropdown">
-                <li><a class="smoothscroll dropbtn"  href="#about" title="about">About &nbsp</a>
-                    <div class="dropdown-content">
-                    <a class="smoothscroll" href="#about">Note</a>
-                    <a class="smoothscroll" href="#aftermovie">Aftermovie</a>
-                    <a href="gallery/gallery.html">Gallery</a>
+                	<li><a class="smoothscroll dropbtn" title="about">About &nbsp</a>
+                    	<div class="dropdown-content">
+                    	<a class="smoothscroll" href="#about">Note</a>
+                    	<a class="smoothscroll" href="#aftermovie">Aftermovie</a>
+                    	<a href="gallery/gallery.html" target="_blank">Gallery</a>
                     <a href="https://drive.google.com/file/d/1cwZBYmbYUynT_fK0LQzecyqShtB-EJH7/view" target="_blank">Brouchor</a>
                   </div>
                 </li>
             </div>
-                <li><a class="smoothscroll"  href="team/team.html" target="_blank" title="Team">Team &nbsp&nbsp&nbsp</a></li>
+                <li><a href="team/team.html"  class="smoothscroll" target="_blank" title="Team">Team &nbsp&nbsp&nbsp</a></li>
                 
                 <div class="dropdown">
-                <li><a class="smoothscroll dropbtn"  href="events/events.html" target="_blank" title="Events">Events &nbsp&nbsp&nbsp</a>
+                <li><a class="smoothscroll dropbtn" target="_blank" title="Events">Events &nbsp&nbsp&nbsp</a>
                         <div class="dropdown-content">
                             <a class="smoothscroll" href="events/events.html">The Events</a>
                             <a class="smoothscroll" href="register/register.html">Register</a>
@@ -117,9 +124,10 @@
                 </li>
                 </div>
 
-                <li><a class="smoothscroll"  href="ca/ca.html" target="_blank" title="Campus Ambassador">Campus Ambassador</a></li>
+                <li><a class="smoothscroll"  href="./ca/ca.html" target="_blank" title="Campus Ambassador">Campus Ambassador</a></li>
                 <li><a class="smoothscroll"  href="social/social.html" target="_blank" title="Social Cause">Social Cause</a></li>
                 <li><a class="smoothscroll"  href="sponsors/sponsors.html" target="_blank" title="Previous Sponsors">Previous Sponsors</a></li>
+                <li><a class="smoothscroll"  href="register/register.html" target="_blank" title="Previous Sponsors">Regisetr</a></li>
                 <li><a class="smoothscroll"  href="associate/associate.html" target="_blank" title="Associate">Associate With Us</a></li>
                 <li><a class="smoothscroll"  href="team/team.html" target="_blank" title="Contact">Contact</a></li>
             </ul>
@@ -192,12 +200,13 @@
         <div class="row about-content">
 
             <div class="col-six tab-full left">
-                <h3>Campus Ambassador</h3>
+                <h3>Events</h3>
 
-                <p style="font-weight: bold;">Who are Campus Ambassador and what they do?</p>
+                <p style="font-weight: bold;">Let's Play</p>
 
                 <p>
-                   Udghosh, IIT Kanpur is India’s Largest College Sports festival with a total footfall of more than 60 thousand, a reach of more than 200 colleges in India and over 2500 participants. In the past 21 years, Udghosh, IIT Kanpur has worked to promote Sportsmanship spirit, leadership skills, and unification among the youth. A college ambassador is instrumental in igniting this spirit among the young minds of their college.
+                   Udghosh, IIT Kanpur is India’s Largest College Sports festival with a total footfall of more than 60 thousand.Our Campus has Worls class outdoor and indoor as well. We host Footbal , Hockey , Basketball , atletics , Cricket on standard size fields . With indoor Badminton , Table Tennis , Squash facilities.
+                   <br/><br /> We also organise basketball , Volleyball and Badminton for girl teams . We offer board games like Chess , Carrom also.
                 </p>
             </div>
 
@@ -236,9 +245,9 @@
 
         <div class="row about-content about-content--buttons">
 
-            <div class="col-six tab-full left">
+            <!-- <div class="col-six tab-full left">
                 <a href="ca/ca.html" class="btn btn--primary full-width">Become Campus Ambassador</a>
-            </div>
+            </div> -->
             <div class="col-six tab-full right">
                 <a href="register/register.html" class="btn full-width">Register Your Team</a>
             </div>
@@ -259,10 +268,14 @@
                         <div class="timeline__header">
                             <p class="timeline__timeframe">October 2017</p>
                             <h3>Udghosh Aftermovie</h3>
-                            <h5>watch it.</h5>
+                            <h5>Play it.</h5>
                         </div>
-                        <div class="timeline__desc">
-                            <iframe width="854" height="480" src="https://www.youtube.com/embed/4vi2ZTXYSAo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>   
+                        <div class="timeline__desc" id="bigscreen">
+                           <iframe width="854" height="480" src="https://www.youtube.com/embed/4vi2ZTXYSAo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <!-- hidden when screen size is less -->
+                        <div class="timeline__desc" id="smallscreen">
+                           <iframe width="300" height="150" src="https://www.youtube.com/embed/4vi2ZTXYSAo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div> <!-- end timeline__block -->
                     <br><br><br><br><br><br>
@@ -279,6 +292,22 @@
                         </div>
                     </div> <!-- end timeline__block -->
 
+
+                    <!-- <br><br><br><br><br><br>
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div id="brouchor" class="timeline__header">
+                            <p class="timeline__timeframe"></p>
+                            <h3>Associate With Us</h3>
+                            <h5></h5>
+                        </div>
+                        <div class="timeline__desc">	
+                            <a 
+                           class="btn btn--primary full-width" href="https://drive.google.com/file/d/1cwZBYmbYUynT_fK0LQzecyqShtB-EJH7/view">Download broucher</a>
+                        </div>
+                    </div> -->
+
+
                 </div> <!-- end timeline -->
             </div> <!-- end left -->
 
@@ -286,6 +315,8 @@
         </div> <!-- end about-content timeline -->
 
     </section> <!-- end about -->
+
+
     
 
     <!-- works
@@ -368,6 +399,99 @@
                 <!-- </div> -->
 
                 
+                <!-- Associate With Us -->
+<section id="blog" class="s-blog target-section">
+
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h3>Sponsors</h3>
+                <h1>Associate With Us</h1>
+                <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute. 
+                Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum 
+                ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>
+            </div>
+        </div>
+
+        <div class="row blog-content">
+            <div class="col-full">
+
+                <div class="blog-list block-1-2 block-tab-full">
+                    <article class="col-block">
+                        
+                        <h2 class="h01"><a href="blog-single.html">Marketing</a></h2>
+                        <p>
+                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh..
+                        </p>
+                        <div class="col-six tab-full right">
+               				<a href="#" class="btn full-width">Join us</a>
+           				</div>
+
+                        
+                    </article>
+                    <article class="col-block">  
+                        
+                        <h2 class="h01"><a href="blog-single.html">Media.</a></h2>
+                        <p>
+                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh..
+                        </p>
+                        <div class="col-six tab-full right">
+               				<a href="#" class="btn full-width">Join us</a>
+           				</div>
+
+                        
+                   <!--  </article>
+                    <article class="col-block">
+                        
+                        <div class="blog-date">
+                            <a href="blog-single.html">Sept 14, 2017</a>
+                        </div>
+
+                        <h2 class="h01"><a href="blog-single.html">Workspace Design Trends and Ideas.</a></h2>
+                        <p>
+                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh dolore irure esse Duis nulla sint.
+                        </p>
+
+                        <div class="blog-cat">
+                            <a href="blog.html">Branding</a><a href="blog.html">Wordpress</a>
+                        </div>
+                    </article>
+                    <article class="col-block">
+                        
+                        <div class="blog-date">
+                            <a href="blog-single.html">Sept 12, 2017</a>
+                        </div>    
+                        <h2 class="h01"><a href="blog-single.html">Using Patterns in your Branding.</a></h2>
+                        <p>
+                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh.
+                        </p>
+
+                        <div class="blog-cat">
+                            <a href="blog.html">Design</a><a href="blog.html">Branding</a>
+                        </div>
+                    </article> -->
+                </div> 
+
+            </div> 
+        </div> 
+    </section> 
+
+    <section class="s-cta">
+        
+        <div class="row narrow cta">
+
+            <div class="col-full cta__content">
+
+                <h2 class="h01">Promote Your Brand here</h2><br>
+
+                <div class="cta__action">
+                    <a class="btn btn--primary btn--large" href="register/register.html">Register Your Brand</a>
+                </div>  
+
+            </div>
+
+        </div> <!-- end cta -->
+        
+    </section>
 
 
     <!-- testimonials
@@ -419,115 +543,9 @@
 
     </div> <!-- end s-testimonials -->
 
-
-    <!-- blog
-    ================================================== -->
-    <section id="blog" class="s-blog target-section">
-
-        <div class="row narrow section-intro has-bottom-sep">
-            <div class="col-full">
-                <h3>Journal</h3>
-                <h1>Latest From The Blog.</h1>
-                <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute. 
-                Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum 
-                ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>
-            </div>
-        </div>
-
-        <div class="row blog-content">
-            <div class="col-full">
-
-                <div class="blog-list block-1-2 block-tab-full">
-                    <article class="col-block">
-                                
-                        <div class="blog-date">
-                            <a href="blog-single.html">Sept 16, 2017</a>
-                        </div>  
-                        
-                        <h2 class="h01"><a href="blog-single.html">The 10 Golden Rules of Clean Simple Design.</a></h2>
-                        <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh..
-                        </p>
-
-                        <div class="blog-cat">
-                                <a href="blog.html">Branding</a><a href="blog.html">Design</a>
-                        </div>
-
-                        
-                    </article>
-                    <article class="col-block">
-                                
-                        <div class="blog-date">
-                            <a href="blog-single.html">Sept 15, 2017</a>
-                        </div>  
-                        
-                        <h2 class="h01"><a href="blog-single.html">Photography Can Improve Your Graphic Design.</a></h2>
-                        <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh..
-                        </p>
-
-                        <div class="blog-cat">
-                            <a href="blog.html">Photography</a>
-                        </div>
-
-                        
-                    </article>
-                    <article class="col-block">
-                        
-                        <div class="blog-date">
-                            <a href="blog-single.html">Sept 14, 2017</a>
-                        </div>
-
-                        <h2 class="h01"><a href="blog-single.html">Workspace Design Trends and Ideas.</a></h2>
-                        <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh dolore irure esse Duis nulla sint.
-                        </p>
-
-                        <div class="blog-cat">
-                            <a href="blog.html">Branding</a><a href="blog.html">Wordpress</a>
-                        </div>
-                    </article>
-                    <article class="col-block">
-                        
-                        <div class="blog-date">
-                            <a href="blog-single.html">Sept 12, 2017</a>
-                        </div>    
-                        <h2 class="h01"><a href="blog-single.html">Using Patterns in your Branding.</a></h2>
-                        <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh.
-                        </p>
-
-                        <div class="blog-cat">
-                            <a href="blog.html">Design</a><a href="blog.html">Branding</a>
-                        </div>
-                    </article>
-                </div> <!-- end blog-list -->
-
-            </div> <!-- end col-full -->
-        </div> <!-- end blog-content -->
-
-    </section> <!-- end s-blog -->
-
-
     <!-- s-cta
     ================================================== -->
-    <section class="s-cta">
-        
-        <div class="row narrow cta">
-
-            <div class="col-full cta__content">
-
-                <h2 class="h01">Be part of Udghosh Family</h2><br>
-
-                <div class="cta__action">
-                    <a class="btn btn--primary btn--large" href="register/register.html">Register Now</a>
-                </div>	
-
-            </div>
-
-        </div> <!-- end cta -->
-        
-    </section>
+    
 
 
     <!-- s-stats
@@ -661,16 +679,16 @@
 
                 <ul class="footer-social">
             <li>
-                <a href="https://www.facebook.com/udghosh.iitk/"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+                <a href="https://www.facebook.com/udghosh.iitk/"  target="_blank"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
             </li>
             <li>
-                <a href="https://twitter.com/udghoshiitk"><i class="im im-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+                <a href="https://twitter.com/udghoshiitk"  target="_blank"><i class="im im-twitter" aria-hidden="true"></i><span>Twitter</span></a>
             </li>
             <li>
-                <a href="https://www.instagram.com/udghosh_iitk/"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                <a href="https://www.instagram.com/udghosh_iitk/"  target="_blank"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
             </li>
             <li>
-                <a href="#"><i class="im im-youtube " aria-hidden="true"></i><span>Youtube</span></a>
+                <a href="https://www.youtube.com/user/udghosh11" target="_blank"><i class="im im-youtube " aria-hidden="true"></i><span>Youtube</span></a>
             </li>
         </ul> 
                 </ul>
