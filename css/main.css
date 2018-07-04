@@ -2204,7 +2204,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .about-content {
-    margin-bottom: 3rem;
+    margin-bottom: 0px;s
 }
 
 .about-content .left {
@@ -2859,7 +2859,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 
 .s-blog {
-    padding-top: 15rem;
+    padding-top: 0px;
     padding-bottom: 9.6rem;
     background-color: #FFFFFF;
     position: relative;
